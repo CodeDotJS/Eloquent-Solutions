@@ -8,12 +8,14 @@ function tableFor(event, journal) {
       var entry = journal[i],
       var index = 0;
       if (hasEvent(event, entry)) {
-         index = index + 1;
+         index += 1;
       }
       if (entry.squirrel) {
-         index = index + 2;
+         index += 2;
       }
-      table[index] = table[index] + 1;
+      table[index] += 1;
    }
    return table;
 }
+
+console.log(tableFor("pizza", JOURNAL));
